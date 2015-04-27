@@ -1,12 +1,14 @@
 # Ember-offline
 
-This README outlines the details of collaborating on this Ember addon.
+Show notification on Ember app when user goes offline.
+
+## Demo
+
+Check out the demo on [github pages](https://ahmadsoe.github.io/ember-offline/ "Ember-offline demo").
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+`ember install ember-offline`
 
 ## Running
 
