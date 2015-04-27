@@ -1,7 +1,7 @@
 {
   "name": "ember-offline",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Show notification on Ember app when user goes offline.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -34,7 +34,9 @@
     "ember-try": "0.0.4"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-offline",
+    "notification"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.0.0"
