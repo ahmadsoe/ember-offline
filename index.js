@@ -1,24 +1,14 @@
 /* jshint node: true */
 'use strict';
 
-var extend = require('util')._extend;
-
 module.exports = {
   name: 'ember-offline',
   included: function(app) {
     this._super.included(app);
 
-    var defaultThemes = {
-      theme: 'default',
-      indicator: false,
-      language: 'english'
-    };
-
     var config = this.project.config(app.env);
-    var emberOffline = config.emberOffline || {};
-    var configThemes = emberOffline.themes || {};
 
-    var themes = extend(defaultThemes, configThemes);
+    var themes = config.emberOffline.themes;
     var themesDir = app.bowerDirectory + '/offline/themes';
 
     if (themes.theme) {

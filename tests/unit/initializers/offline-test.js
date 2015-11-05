@@ -1,14 +1,14 @@
 import Ember from 'ember';
-import initializer from '../../../initializers/offline-service';
+import { initialize } from '../../../initializers/offline';
 import { module, test } from 'qunit';
 
-var container, application;
+let registry, application;
 
-module('OfflineServiceInitializer', {
+module('Unit | Initializer | offline', {
   beforeEach: function() {
     Ember.run(function() {
       application = Ember.Application.create();
-      container = application.__container__;
+      registry = application.registry;
       application.deferReadiness();
     });
   }
@@ -16,7 +16,7 @@ module('OfflineServiceInitializer', {
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  initializer.initialize(container, application);
+  initialize(registry, application);
 
   // you would normally confirm the results of the initializer here
   assert.ok(true);
