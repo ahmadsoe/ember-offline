@@ -1,9 +1,6 @@
-import {
-  moduleFor,
-  test
-} from 'ember-qunit';
+import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('service:offline-service', {
+moduleFor('service:offline', 'Unit | Service | offline', {
   // Specify the other units that are required for this test.
   // needs: ['service:foo']
 });
