@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     window.setInterval(this.checking, 3000);
   },
 
-  checking: function () {
+  checking() {
     this.$.get('/ajax_test');
   }
 });
