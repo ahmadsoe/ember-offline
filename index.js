@@ -31,6 +31,6 @@ module.exports = {
       app.import(themesDir + '/offline-language-' + themes.language + '-indicator.css');
     }
 
-    app.import(app.bowerDirectory + '/offline/offline.min.js');
+    app.import(app.bowerDirectory + '/offline/offline.js');
   }
 };
