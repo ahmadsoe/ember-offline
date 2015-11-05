@@ -1,6 +1,7 @@
 bower_components/
 tests/
 tmp/
+dist/
 gh-pages/
 
 .bowerrc
@@ -10,5 +11,5 @@ gh-pages/
 .npmignore
 **/.gitkeep
 bower.json
-Brocfile.js
+ember-cli-build.js
 testem.json
