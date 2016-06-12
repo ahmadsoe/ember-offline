@@ -1,6 +1,7 @@
 # Ember-offline
 
 Show notification on Ember app when user goes offline.
+Ember-offline is a wrapper of the [offline.js](http://github.hubspot.com/offline/docs/welcome/) library.
 
 ## Demo
 
