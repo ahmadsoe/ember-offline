@@ -1,11 +1,9 @@
 {
   "name": "ember-offline",
   "version": "0.1.0",
-  "description": "Show notification on Ember app when user goes offline.",
+  "description": "The default blueprint for ember-cli addons.",
   "keywords": [
-    "ember-addon",
-    "ember-offline",
-    "notification"
+    "ember-addon"
   ],
   "license": "MIT",
   "author": "",
@@ -13,7 +11,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "https://github.com/ahmadsoe/ember-offline.git",
+  "repository": "",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
@@ -22,7 +20,7 @@
   "dependencies": {
     "ember-cli-babel": "^6.5.1",
     "ember-cli-node-assets": "^0.2.2",
-    "fastboot-transform": "^0.1.1",
+    "fastboot-transform": "github:devotox/fastboot-transform",
     "offline-js": "^0.7.19"
   },
   "devDependencies": {
@@ -35,7 +33,6 @@
     "ember-cli-htmlbars-inline-precompile": "^0.4.3",
     "ember-cli-inject-live-reload": "^1.6.1",
     "ember-cli-qunit": "^4.0.0",
-    "ember-cli-release": "^1.0.0-beta.2",
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-uglify": "^1.2.0",
@@ -44,10 +41,11 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.2.1",
     "ember-source": "~2.14.0-beta.1",
+    "ember-welcome-page": "^3.1.1",
     "loader.js": "^4.5.1"
   },
   "engines": {
-    "node": ">= 0.12.0"
+    "node": ">= 4"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
