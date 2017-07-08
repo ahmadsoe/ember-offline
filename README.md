@@ -1,15 +1,12 @@
 # ember-offline
 
-Show notification on Ember app when user goes offline.
-ember-offline is a wrapper of the [offline.js](http://github.hubspot.com/offline/docs/welcome/) library.
-
-## Demo
-
-Check out the demo on [github pages](https://ahmadsoe.github.io/ember-offline/ "Ember-offline demo").
+This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
-`ember install ember-offline`
+* `git clone <repository-url>` this repository
+* `cd ember-offline`
+* `npm install`
 
 ## Running
 
@@ -18,7 +15,7 @@ Check out the demo on [github pages](https://ahmadsoe.github.io/ember-offline/ "
 
 ## Running Tests
 
-* `npm test` (Runs `ember try:each` to test the addon against multiple Ember versions)
+* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
 * `ember test`
 * `ember test --server`
 
