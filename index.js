@@ -1,26 +1,64 @@
-/* jshint node: true */
-'use strict';
+/* eslint-env node */
+const FastbootTransform = require('fastboot-transform');
 
 module.exports = {
   name: 'ember-offline',
-  included: function(app) {
-    this._super.included(app);
+  options: {
+    nodeAssets: {
+      'offline-js': {
+        vendor: {
+          include: ['offline.js', 'themes/*'],
+          processTree(input) {
+            return FastbootTransform(input);
+          }
+        }
+      }
+    }
+  },
+  included(app) {
+    this._super.included.apply(this, arguments);
+    this._ensureThisImport();
 
-    var config = this.project.config(app.env);
+    let config = this.project.config(app.env);
 
-    var themes = config.emberOffline.themes;
-    var themesDir = app.bowerDirectory + '/offline/themes';
+    let themes = config.emberOffline.themes;
+    let themesDir =  'vendor/offline-js/themes';
+
+    if(!themes) {
+      themes = {
+        theme: 'chrome',
+        indicator: false,
+        language: 'english',
+      }
+    }
 
     if (themes.theme) {
-      app.import(themesDir + '/offline-theme-' + themes.theme + '.css');
-      app.import(themesDir + '/offline-language-' + themes.language + '.css');
+      this.import(`${themesDir}/offline-theme-${themes.theme}.css`);
+      this.import(`${themesDir}/offline-language-${themes.language}.css`);
     }
 
     if (themes.indicator) {
-      app.import(themesDir + '/offline-theme-' + themes.indicator + '-indicator.css');
-      app.import(themesDir + '/offline-language-' + themes.language + '-indicator.css');
+      this.import(`${themesDir}/offline-theme-${themes.indicator}-indicator.css`);
+      this.import(`${themesDir}/offline-language-${themes.language}-indicator.css`);
     }
 
-    app.import(app.bowerDirectory + '/offline/offline.js');
+    this.import('vendor/offline-js/offline.js');
+  },
+  _ensureThisImport() {
+    if (!this.import) {
+      this._findHost = function findHostShim() {
+        let current = this;
+        let app;
+
+        do {
+          app = current.app || app;
+        } while (current.parent.parent && (current = current.parent));
+        return app;
+      };
+      this.import = function importShim(asset, options) {
+        let app = this._findHost();
+        app.import(asset, options);
+      };
+    }
   }
 };
