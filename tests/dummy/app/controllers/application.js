@@ -1,5 +1,6 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { inject as service } from '@ember/service';
 
-export default Ember.Controller.extend({
-  offline: Ember.inject.service()
+export default Controller.extend({
+  offline: service()
 });

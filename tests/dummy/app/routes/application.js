@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
-  init: function() {
+export default Route.extend({
+  init() {
     window.setInterval(this.checking, 3000);
   },
 
