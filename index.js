@@ -1,4 +1,6 @@
 /* eslint-env node */
+'use strict';
+
 const FastbootTransform = require('fastboot-transform');
 
 module.exports = {
