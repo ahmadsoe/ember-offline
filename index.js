@@ -28,7 +28,7 @@ module.exports = {
 
     if(!themes) {
       themes = {
-        theme: 'chrome',
+        theme: 'default',
         indicator: false,
         language: 'english',
       }
