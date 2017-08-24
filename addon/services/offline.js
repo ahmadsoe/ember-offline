@@ -1,8 +1,9 @@
-import Ember from 'ember';
+import Service from '@ember/service';
+import { set, get } from '@ember/object';
+import { on } from '@ember/object/evented';
+import { equal } from '@ember/object/computed';
 
-const { get, set, on, computed: { equal } } = Ember;
-
-export default Ember.Service.extend({
+export default Service.extend({
   state: 'up',
   isUp: equal('state', 'up'),
   isDown: equal('state', 'down'),
@@ -12,8 +13,8 @@ export default Ember.Service.extend({
   },
 
   _setupEvents: on('init', function() {
-    let offline = get(this, 'offline');
-
+    const offline = get(this, 'offline');
+    
     offline.on('up', () => {
       set(this, 'state', 'up');
     });

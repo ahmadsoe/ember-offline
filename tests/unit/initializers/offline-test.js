@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import Application from '@ember/application';
+import { run } from '@ember/runloop';
 import { initialize } from '../../../initializers/offline';
 import { module, test } from 'qunit';
 
@@ -6,8 +7,8 @@ let registry, application;
 
 module('Unit | Initializer | offline', {
   beforeEach: function() {
-    Ember.run(function() {
-      application = Ember.Application.create();
+    run(function() {
+      application = Application.create();
       registry = application.registry;
       application.deferReadiness();
     });
