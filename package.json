@@ -1,6 +1,6 @@
 {
   "name": "ember-offline",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Show notification on Ember app when user goes offline.",
   "keywords": [
     "ember-addon",
