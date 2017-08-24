@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/ahmadsoe/ember-offline.svg?branch=master)](https://travis-ci.org/ahmadsoe/ember-offline)
+[![npm version](https://badge.fury.io/js/ember-offline.svg)](https://badge.fury.io/js/ember-offline)
+
 # ember-offline
 
 Show notification on Ember app when user goes offline.
