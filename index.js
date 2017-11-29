@@ -22,17 +22,16 @@ module.exports = {
     this._ensureThisImport();
 
     let config = this.project.config(app.env);
+    config.emberOffline = config.emberOffline || {};
 
-    let themes = config.emberOffline.themes;
     let themesDir =  'vendor/offline-js/themes';
+    let themes = config.emberOffline.themes || {};
 
-    if(!themes) {
-      themes = {
-        theme: 'default',
-        indicator: false,
-        language: 'english',
-      }
-    }
+    themes = Object.assign({
+      language: 'english',
+      theme: 'default',
+      indicator: false,
+    }, themes);
 
     if (themes.theme) {
       this.import(`${themesDir}/offline-theme-${themes.theme}.css`);
