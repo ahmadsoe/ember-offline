@@ -46,7 +46,6 @@ module.exports = {
     this.import('vendor/offline-js/offline.js');
   },
 
-
   _getAddonOptions() {
     return this.parent && this.parent.options
       || this.app && this.app.options || {};
