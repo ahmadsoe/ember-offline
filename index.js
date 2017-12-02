@@ -46,6 +46,20 @@ module.exports = {
     this.import('vendor/offline-js/offline.js');
   },
 
+  config(env, baseConfig) {
+      let emberOffline = this._getAddonOptions().emberOffline || {};
+
+      emberOffline.themes = Object.assign({
+        language: 'english',
+        theme: 'default',
+        indicator: false,
+      }, emberOffline.themes || {});
+
+      return {
+        emberOffline
+      };
+  },
+
   _getAddonOptions() {
     return this.parent && this.parent.options
       || this.app && this.app.options || {};
