@@ -47,17 +47,17 @@ module.exports = {
   },
 
   config(env, baseConfig) {
-      let emberOffline = this._getAddonOptions().emberOffline || {};
+    let emberOffline = this._getAddonOptions().emberOffline || {};
 
-      emberOffline.themes = Object.assign({
-        language: 'english',
-        theme: 'default',
-        indicator: false,
-      }, emberOffline.themes || {});
+    emberOffline.themes = Object.assign({
+      language: 'english',
+      theme: 'default',
+      indicator: false,
+    }, emberOffline.themes || {});
 
-      return {
-        emberOffline
-      };
+    return {
+      emberOffline
+    };
   },
 
   _getAddonOptions() {
