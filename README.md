@@ -30,3 +30,5 @@ Check out the demo on [github pages](https://ahmadsoe.github.io/ember-offline/ "
 * `ember build`
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+This project is tested with BrowserStack
