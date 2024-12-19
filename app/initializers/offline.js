@@ -5,7 +5,7 @@ export function initialize() {
 
   // apply config to global Offline
   window.Offline = window.Offline || {};
-  window.Offline.options = config.emberOffline;
+  window.Offline.options = config.emberOffline || {};
 
   application.register('offline:main', window.Offline, { instantiate: false });
   application.inject('service:offline', 'offline', 'offline:main');
